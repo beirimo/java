@@ -1,0 +1,68 @@
+package professors;
+
+public class ProVO { //교수 정보를 저장할 자바빈
+	private String pcode;
+	private String pname;
+	private String dept;
+	private String hiredate;
+	private String title;
+	private int salary;
+	
+	public ProVO() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public ProVO(String pcode, String pname, String dept, String hiredate, String title, int salary) {
+		super();
+		this.pcode = pcode;
+		this.pname = pname;
+		this.dept = dept;
+		this.hiredate = hiredate;
+		this.title = title;
+		this.salary = salary;
+	}
+	
+	
+
+	@Override
+	public String toString() {
+		return "ProVO [pcode=" + pcode + ", pname=" + pname + ", dept=" + dept + ", hiredate=" + hiredate + ", title="
+				+ title + ", salary=" + salary + "]";
+	}
+
+	public void setPcode(String string) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setPname(String string) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setDept(String string) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setTitle(String string) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setSalary(int int1) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setHiredate(String string) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
+	
+	
+
+}

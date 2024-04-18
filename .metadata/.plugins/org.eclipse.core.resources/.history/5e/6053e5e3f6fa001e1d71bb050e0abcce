@@ -1,0 +1,56 @@
+package sale;
+
+import java.util.*;
+import java.util.*;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+	      boolean run=true;
+	      Scanner scan=new Scanner(System.in);
+	      SaleDAO dao = new SaleDAO();
+	      while(run) {
+			System.out.println("\n**********************판매관리**********************");
+			System.out.println("-------------------------------------------------");
+	         System.out.println("1. 판매등록 | 2. 판매조회 | 3. 판매목록 | 4. 판매삭제 | 0. 종료");
+			 System.out.println("-------------------------------------------------");
+			 System.out.print("메뉴를 선택하세요. => ");
+	         String menu=scan.nextLine();
+        	 System.out.println("");
+	         switch(menu) {
+	         
+	         case "1":
+	            break;
+	            
+	         case "2":
+	            break;
+	            
+	         case "3":
+	        	 ArrayList<Sale> array = dao.list();
+	        	 for(Sale s:array) {
+	        		 System.out.printf("%d\t%s\t%d만원\t%d개\t%,d만원\n", s.getCode(), s.getName(), s.getPrice(), s.getQnt(), s.getPrice()*s.getQnt());
+	        	 }
+	        	 System.out.println("");
+	        	 System.out.println(array.size() + "개 상품이 존재합니다.");
+	            break;
+	            
+	         case "4":   
+	            break;
+	            
+	         case "0":
+	            run=false;
+	            break;
+	            
+	         default:
+	        	 System.out.println("0~4번 메뉴를 선택하세요.");
+	        	 break;
+	            
+	         }//switch
+	      }//while
+	      System.out.println("프로그램을 종료합니다.");
+
+	}
+
+}

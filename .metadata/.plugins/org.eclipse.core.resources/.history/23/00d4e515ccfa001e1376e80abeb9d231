@@ -1,0 +1,55 @@
+package juso;
+
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		JusoDAO dao = new JusoDAO();
+		boolean run = true;
+		while (run) {
+			System.out.println("\n**********************주소관리**********************");
+			System.out.println("-------------------------------------------------");
+			System.out.println("1. 주소등록 | 2. 주소조회 | 3. 주소목록 | 4. 주소삭제 | 0. 종료");
+			System.out.println("-------------------------------------------------");
+			System.out.print("메뉴를 선택하세요. => ");
+			String menu = s.nextLine();
+		
+			switch (menu) {
+			
+			case "1" :
+				//System.out.println("이름을 입력하세요. => ");
+				break;
+				
+			case "2" :
+
+				break;
+				
+			case "3" : //주소목록 출력
+				ArrayList<Juso> array = dao.list(); //10번
+				for(Juso j:array) {
+					j.toString();
+				}
+				break;
+				
+			case "4" :
+
+				break;
+				
+			case "0" :
+				run = false;
+				break;
+				
+			default :
+				System.out.println("0~4번 메뉴를 선택하세요.");
+				break;
+		
+			}//switch
+
+		}//while
+		System.out.println("프로그램을 종료합니다.");
+	}//method
+
+}//class

@@ -1,0 +1,86 @@
+package professors;
+
+import java.util.*;
+
+public class Main {
+
+	public static void main(String[] args) {
+	      boolean run = true;
+	      Scanner scanner = new Scanner(System.in);
+	      ProDAO dao = new ProDAO();
+	      while(run) {
+	         System.out.println("\n=========================================");
+	         System.out.println("1.등록 | 2.조회 | 3.목록 | 4.삭제 | 5.수정 | 0.종료");
+	         System.out.println("=========================================");
+	         System.out.print("선택 > ");
+	         String menu= scanner.nextLine();
+	         switch(menu) {
+	            case "1" : //등록
+	            	ProVO vo = new ProVO();
+	            	System.out.print("교수 코드 > ");
+	            	String pcode = scanner.nextLine();
+	            	if(pcode=="") {
+	            		System.out.println("등록을 취소합니다.");
+	            		break;
+	            	}
+	            	vo.setPcode(pcode);
+	            	
+	            	System.out.print("교수 이름 > ");
+	            	String pname = scanner.nextLine();
+	            	if(pname=="") {
+	            		System.out.println("등록을 취소합니다.");
+	            		break;
+	            	}
+	            	vo.setPname(pname);
+	            	
+	            	System.out.print("교수 부서 > ");
+	            	String dept = scanner.nextLine();
+	            	if(dept=="") {
+	            		System.out.println("등록을 취소합니다.");
+	            		break;
+	            	}
+	            	vo.setDept(dept);
+	            	
+	            	System.out.print("교수 날짜 > ");
+	            	String hiredate = scanner.nextLine();
+	            	if(hiredate=="") {
+	            		System.out.println("등록을 취소합니다.");
+	            		break;
+	            	}
+	            	vo.setHiredate(hiredate);
+	            	
+	            	System.out.print("교수 직위 > ");
+	            	String title = scanner.nextLine();
+	            	if(title=="") {
+	            		System.out.println("등록을 취소합니다.");
+	            		break;
+	            	}
+	            	vo.setTitle(title);
+	           
+	            	
+	            	dao.insert(vo);
+	            	System.out.println("교수등록 완료");
+	               break;
+	            case "2" :
+	               break;
+	            case "3" : //목록
+	            	for(ProVO v:dao.list()) {
+	            		System.out.println(v.toString());
+	            	}
+	               break;
+	            case "4" :
+	               break;
+	            case "5" :
+		           break;
+	            case "0" :
+	               System.out.println("프로그램을 종료합니다.");
+	               run = false;
+	               break;
+	            default:
+	               System.out.println("0~5 메뉴를 입력하세요!");
+	               break;
+	         }//switch   
+	      }//while
+	   }//method
+}
+

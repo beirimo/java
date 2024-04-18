@@ -1,0 +1,7 @@
+package am;
+
+public class Sub02 {
+	public static void run() {
+
+	}
+}

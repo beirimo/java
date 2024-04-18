@@ -1,0 +1,58 @@
+package product;
+
+import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class ProductVO { //자바빈
+	private String code;
+	private String name;
+	private int price;
+	private int sum;
+	private Date sale_date;
+	private int qnt;
+	
+	public String getCode() {
+		return code;
+	}
+	public void setCode(String code) {
+		this.code = code;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getPrice() {
+		return price;
+	}
+	public void setPrice(int price) {
+		this.price = price;
+	}
+	
+	public double getSum() {
+		// TODO Auto-generated method stub
+		return getPrice() * qnt;
+	}
+	
+	@Override
+	public String toString() {
+		DecimalFormat df = new DecimalFormat("#,###");
+		String fmtPrice = df.format(getPrice());
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy년MM월dd일");
+
+		String fmtDate = sdf.format(sale_date);
+
+		int sum = getPrice() * qnt;
+		String fmtSum = df.format(sum);
+		return "상품 코드 = " + code + ", 판매 날짜 = " + fmtDate + ", 판매 수량 = " + qnt 
+				+ ", 상품 이름 = " + getName() + ", 상품 가격 = " + fmtPrice + ", 상품 금액 = " + fmtSum;
+	}
+	
+
+
+	
+	
+
+}

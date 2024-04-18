@@ -1,0 +1,66 @@
+package sale;
+
+import java.text.DecimalFormat;
+import java.util.*;
+
+import product.*;
+
+
+public class Sub {
+	public static void run() { //void 리턴할것이 없으면
+		SaleDAO dao = new SaleDAO();
+		ProductDAO pdao = new ProductDAO();
+		boolean run = true;
+		Scanner scanner = new Scanner(System.in);
+		DecimalFormat df = new DecimalFormat("#,###원");
+
+		while(run) {
+			System.out.println("\n=========================================");
+			System.out.println("1.판매등록|2.판매조회|3.판매현황|4.판매삭제|0.종료");
+			System.out.println("=========================================");
+			System.out.print("메뉴를 입력하세요. => ");
+			String menu= scanner.nextLine();
+			System.out.println("");
+			switch(menu) {
+			
+			case "1" :
+				break;
+				
+			case "2" : //판매조회
+				System.out.print("조회할 상품 코드를 입력하세요. = > ");
+				String code2 = scanner.nextLine();
+				ProductVO vo2 = pdao.read(code2);
+				if(vo2.getCode()==null) {
+					System.out.println(code2 + "번 상품이 존재하지 않습니다.");
+				}
+				else {
+					System.out.println("상품 이름 : " + vo2.getName());
+					System.out.println("상품 단가 : " + df.format(vo2.getPrice()));
+				}
+				break;
+				
+			case "3" : //판매현황
+				System.out.println("\t\t\t\t상품 판매 현황\t\t\t\n");
+				for(SaleVO vo3 : dao.list()) {
+					System.out.println(vo3.toString());
+					
+				}
+				break;
+				
+			case "4" :
+				
+				break;
+				
+			case "0" :
+				System.out.println("판매 관리를 종료합니다.");
+				run = false;
+				break;
+				
+			default:
+				System.out.println("0~4 메뉴를 입력하세요!");
+				break;
+			}//switch   
+		}//while
+	}//method
+}
+

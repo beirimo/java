@@ -1,0 +1,17 @@
+package juso;
+
+public class Main {
+
+	public static void main(String[] args) {
+		boolean run = true;
+		while (run) {
+		System.out.println("\n***********************주소관리***********************");
+		System.out.println("-------------------------------------------------");
+		System.out.println("1. 주소등록 | 2. 주소조회 | 3. 주소목록 | 4. 주소삭제 | 0. 종료");
+		System.out.println("-------------------------------------------------");
+
+		}//while
+		
+	}//method
+
+}//class

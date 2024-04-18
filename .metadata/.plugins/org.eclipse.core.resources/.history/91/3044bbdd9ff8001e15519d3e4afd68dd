@@ -1,0 +1,18 @@
+package pm;
+
+import java.io.*;
+import java.util.*;
+
+public class Sub02 {
+	public static void run() {
+		File file = new File("c://data/java/address.txt");
+		try {
+			BufferedReader reader = new BufferedReader(new FileReader(file));
+		}
+		catch(Exception e) {
+			//System.out.println("오류 : " + e.toString());
+			System.out.println("파일이 존재하지 않습니다.");
+		}
+	}
+
+}

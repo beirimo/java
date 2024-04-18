@@ -1,0 +1,19 @@
+package pm;
+
+import java.io.*;
+
+public class Sub01 {
+	public static void run() {
+		File file = new File("c:/data/java/car.txt");
+		try {
+			BufferedReader reader = new BufferedReader(new FileReader(file));
+			String line = "";
+			while((line=reader.readLine()) != null) { //line이 null이 아닌 동안에 반복
+				System.out.println(line);
+			}
+		}
+		catch (Exception e) {
+			System.out.println("오류 : " + e.toString());
+		}
+	}
+}

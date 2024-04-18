@@ -1,0 +1,13 @@
+package am;
+
+public class Sub01 {
+	
+	public static void run() {
+		
+		Car car1 = new Car(); //새로운 객체를 만들어서 car1에 저장
+		
+		car1.print();
+		
+	}
+
+}

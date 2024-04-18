@@ -1,0 +1,12 @@
+package juso;
+
+public class Main {
+
+	public static void main(String[] args) {
+		System.out.println("\n***********************주소관리***********************");
+		System.out.println("1. 주소등록 | 2. 주소조회 | 3. 주소목록 | 4. 주소삭제 | 0. 종료");
+		System.out.println("***********************주소관리***********************");
+
+	}
+
+}

@@ -1,0 +1,15 @@
+package pm;
+
+import java.io.*;
+
+public class Sub01 {
+	public static void run() {
+		File file = new File("c:/data/java/car.txt");
+		try {
+			BufferedReader readr = new BufferedReader(new FileReader(file));
+		}
+		catch (Exception e) {
+			System.out.println("오류 : " + e.toString());
+		}
+	}
+}
