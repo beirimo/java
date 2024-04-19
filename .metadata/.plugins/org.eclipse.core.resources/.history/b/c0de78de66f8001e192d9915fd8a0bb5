@@ -1,9 +1,0 @@
-package am;
-
-public class Sub01 {
-	
-	public static void run() {
-		System.out.println("첫번째 프로그램 입니다.");
-	}
-
-}

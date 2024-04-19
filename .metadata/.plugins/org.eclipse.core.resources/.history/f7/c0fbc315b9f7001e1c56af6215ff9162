@@ -1,6 +1,0 @@
-package am;
-
-import java.util.*;
-
-public class Sub04 {
-	public static void run() { //void 메소드를 실행할때 리턴할 값이 없다.
