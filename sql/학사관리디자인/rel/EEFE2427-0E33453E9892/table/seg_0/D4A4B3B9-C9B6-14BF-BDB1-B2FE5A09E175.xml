@@ -1,0 +1,117 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D4A4B3B9-C9B6-14BF-BDB1-B2FE5A09E175" schemaObject="2106C361-B28D-B9A1-D520-BEBAA0454423" name="ENROLLMENTS">
+<sourceConnName>%ED%95%99%EC%82%AC%EA%B4%80%EB%A6%AC</sourceConnName>
+<sourceObjSchema>HAKSA</sourceObjSchema>
+<sourceObjName>ENROLLMENTS</sourceObjName>
+<createdBy>jay</createdBy>
+<createdTime>2024-04-19 02:21:36 UTC</createdTime>
+<ownerDesignName>학사관리디자인</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="LCODE" id="38AD2334-8041-E0B4-3603-17CB9F60D80E">
+<sourceConnName>%ED%95%99%EC%82%AC%EA%B4%80%EB%A6%AC</sourceConnName>
+<sourceObjSchema>ENROLLMENTS</sourceObjSchema>
+<sourceObjName>LCODE</sourceObjName>
+<createdBy>jay</createdBy>
+<createdTime>2024-04-19 02:21:36 UTC</createdTime>
+<ownerDesignName>학사관리디자인</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>4 BYTE</dataTypeSize>
+<ownDataTypeParameters>4 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="122B2265-48A0-A974-DE6A-70A28603F9E5" referredColumn="1DF06801-AEC9-DA00-E4FD-2FBCAACBE5E3"/>
+</associations>
+</Column>
+<Column name="SCODE" id="23904823-AE73-72AC-89A7-941A28833282">
+<sourceConnName>%ED%95%99%EC%82%AC%EA%B4%80%EB%A6%AC</sourceConnName>
+<sourceObjSchema>ENROLLMENTS</sourceObjSchema>
+<sourceObjName>SCODE</sourceObjName>
+<createdBy>jay</createdBy>
+<createdTime>2024-04-19 02:21:36 UTC</createdTime>
+<ownerDesignName>학사관리디자인</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>8 BYTE</dataTypeSize>
+<ownDataTypeParameters>8 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="35359295-D956-9EEC-91D5-359DDA1890F4" referredColumn="A2097A4B-929A-154C-CCE9-B89D4AC244EB"/>
+</associations>
+</Column>
+<Column name="EDATE" id="4582C46A-D8D2-5451-DCAC-7FC46BD572F4">
+<sourceConnName>%ED%95%99%EC%82%AC%EA%B4%80%EB%A6%AC</sourceConnName>
+<sourceObjSchema>ENROLLMENTS</sourceObjSchema>
+<sourceObjName>EDATE</sourceObjName>
+<createdBy>jay</createdBy>
+<createdTime>2024-04-19 02:21:36 UTC</createdTime>
+<ownerDesignName>학사관리디자인</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="GRADE" id="99177E9C-1D55-591F-9043-36FC833797F4">
+<sourceConnName>%ED%95%99%EC%82%AC%EA%B4%80%EB%A6%AC</sourceConnName>
+<sourceObjSchema>ENROLLMENTS</sourceObjSchema>
+<sourceObjName>GRADE</sourceObjName>
+<createdBy>jay</createdBy>
+<createdTime>2024-04-19 02:21:36 UTC</createdTime>
+<ownerDesignName>학사관리디자인</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="369FB0FE-35E1-05FF-43FD-71E4C0125C53" schemaObject="2106C361-B28D-B9A1-D520-BEBAA0454423" name="ENROLLMENTS_PK">
+<sourceConnName>%ED%95%99%EC%82%AC%EA%B4%80%EB%A6%AC</sourceConnName>
+<sourceObjSchema>HAKSA</sourceObjSchema>
+<sourceObjName>SYS_C007059</sourceObjName>
+<createdBy>jay</createdBy>
+<createdTime>2024-04-19 02:21:36 UTC</createdTime>
+<ownerDesignName>학사관리디자인</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="38AD2334-8041-E0B4-3603-17CB9F60D80E"/>
+<colUsage columnID="23904823-AE73-72AC-89A7-941A28833282"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C241F818-1526-190B-6ED9-F379C57483F0" name="SYS_C007060">
+<createdBy>jay</createdBy>
+<createdTime>2024-04-19 02:21:36 UTC</createdTime>
+<ownerDesignName>학사관리디자인</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="38AD2334-8041-E0B4-3603-17CB9F60D80E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EE60ECEA-9076-E96A-D5F7-116146978B25" name="SYS_C007061">
+<createdBy>jay</createdBy>
+<createdTime>2024-04-19 02:21:36 UTC</createdTime>
+<ownerDesignName>학사관리디자인</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="23904823-AE73-72AC-89A7-941A28833282"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

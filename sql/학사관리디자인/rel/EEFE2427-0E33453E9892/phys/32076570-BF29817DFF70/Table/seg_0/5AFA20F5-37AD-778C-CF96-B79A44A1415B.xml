@@ -1,0 +1,60 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="PROFESSORS" directorySegmentName="seg_0" id="5AFA20F5-37AD-778C-CF96-B79A44A1415B">
+<createdBy>jay</createdBy>
+<createdTime>2024-04-19 02:21:36 UTC</createdTime>
+<ownerDesignName>학사관리디자인</ownerDesignName>
+<schemaObject>2106C361-B28D-B9A1-D520-BEBAA0454423</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>1A373168-BEFF-6717-5414-72682A69F159</segment>
+<tableSpace>D096B30A-21C3-1951-1AD5-6BC316217527</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="HIREDATE" id="0F3CA267-CCB9-4D88-2565-5FC7C6F3622D">
+<createdBy>jay</createdBy>
+<createdTime>2024-04-19 02:21:36 UTC</createdTime>
+<ownerDesignName>학사관리디자인</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="PCODE" id="3306680A-A9F4-B513-FB9D-F83D7A47669F">
+<createdBy>jay</createdBy>
+<createdTime>2024-04-19 02:21:36 UTC</createdTime>
+<ownerDesignName>학사관리디자인</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DEPT" id="933B54D4-99A0-7BC3-EE49-9B8E1C7A1B91">
+<createdBy>jay</createdBy>
+<createdTime>2024-04-19 02:21:36 UTC</createdTime>
+<ownerDesignName>학사관리디자인</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="TITLE" id="97417A04-6AEA-98B2-D447-77E1A7973BCB">
+<createdBy>jay</createdBy>
+<createdTime>2024-04-19 02:21:36 UTC</createdTime>
+<ownerDesignName>학사관리디자인</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="PNAME" id="B0E740A5-12E6-8111-1659-5B5738CB181A">
+<createdBy>jay</createdBy>
+<createdTime>2024-04-19 02:21:36 UTC</createdTime>
+<ownerDesignName>학사관리디자인</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="SALARY" id="C72C97A9-4199-719A-D1D2-20C24F14F3AA">
+<createdBy>jay</createdBy>
+<createdTime>2024-04-19 02:21:36 UTC</createdTime>
+<ownerDesignName>학사관리디자인</ownerDesignName>
+<defaultValue>0</defaultValue>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="PROFESSORS_PK" id="D6578D51-C569-354D-9A48-1F031A71405E">
+<createdBy>jay</createdBy>
+<createdTime>2024-04-19 02:21:36 UTC</createdTime>
+<ownerDesignName>학사관리디자인</ownerDesignName>
+<schemaObject>2106C361-B28D-B9A1-D520-BEBAA0454423</schemaObject>
+<segment>3BBC21B4-3528-9632-AFE4-900889F7BE70</segment>
+<tableSpace>D096B30A-21C3-1951-1AD5-6BC316217527</tableSpace>
+<indexSegment>3BBC21B4-3528-9632-AFE4-900889F7BE70</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev11g>

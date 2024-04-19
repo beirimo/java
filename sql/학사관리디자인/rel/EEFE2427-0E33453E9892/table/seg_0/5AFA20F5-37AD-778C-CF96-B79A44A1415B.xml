@@ -1,0 +1,120 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="5AFA20F5-37AD-778C-CF96-B79A44A1415B" schemaObject="2106C361-B28D-B9A1-D520-BEBAA0454423" name="PROFESSORS">
+<sourceConnName>%ED%95%99%EC%82%AC%EA%B4%80%EB%A6%AC</sourceConnName>
+<sourceObjSchema>HAKSA</sourceObjSchema>
+<sourceObjName>PROFESSORS</sourceObjName>
+<createdBy>jay</createdBy>
+<createdTime>2024-04-19 02:21:36 UTC</createdTime>
+<ownerDesignName>학사관리디자인</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="PCODE" id="3306680A-A9F4-B513-FB9D-F83D7A47669F">
+<sourceConnName>%ED%95%99%EC%82%AC%EA%B4%80%EB%A6%AC</sourceConnName>
+<sourceObjSchema>PROFESSORS</sourceObjSchema>
+<sourceObjName>PCODE</sourceObjName>
+<createdBy>jay</createdBy>
+<createdTime>2024-04-19 02:21:36 UTC</createdTime>
+<ownerDesignName>학사관리디자인</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>3 BYTE</dataTypeSize>
+<ownDataTypeParameters>3 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PNAME" id="B0E740A5-12E6-8111-1659-5B5738CB181A">
+<sourceConnName>%ED%95%99%EC%82%AC%EA%B4%80%EB%A6%AC</sourceConnName>
+<sourceObjSchema>PROFESSORS</sourceObjSchema>
+<sourceObjName>PNAME</sourceObjName>
+<createdBy>jay</createdBy>
+<createdTime>2024-04-19 02:21:36 UTC</createdTime>
+<ownerDesignName>학사관리디자인</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15 BYTE</dataTypeSize>
+<ownDataTypeParameters>15 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DEPT" id="933B54D4-99A0-7BC3-EE49-9B8E1C7A1B91">
+<sourceConnName>%ED%95%99%EC%82%AC%EA%B4%80%EB%A6%AC</sourceConnName>
+<sourceObjSchema>PROFESSORS</sourceObjSchema>
+<sourceObjName>DEPT</sourceObjName>
+<createdBy>jay</createdBy>
+<createdTime>2024-04-19 02:21:36 UTC</createdTime>
+<ownerDesignName>학사관리디자인</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 BYTE</dataTypeSize>
+<ownDataTypeParameters>30 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="HIREDATE" id="0F3CA267-CCB9-4D88-2565-5FC7C6F3622D">
+<sourceConnName>%ED%95%99%EC%82%AC%EA%B4%80%EB%A6%AC</sourceConnName>
+<sourceObjSchema>PROFESSORS</sourceObjSchema>
+<sourceObjName>HIREDATE</sourceObjName>
+<createdBy>jay</createdBy>
+<createdTime>2024-04-19 02:21:36 UTC</createdTime>
+<ownerDesignName>학사관리디자인</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TITLE" id="97417A04-6AEA-98B2-D447-77E1A7973BCB">
+<sourceConnName>%ED%95%99%EC%82%AC%EA%B4%80%EB%A6%AC</sourceConnName>
+<sourceObjSchema>PROFESSORS</sourceObjSchema>
+<sourceObjName>TITLE</sourceObjName>
+<createdBy>jay</createdBy>
+<createdTime>2024-04-19 02:21:36 UTC</createdTime>
+<ownerDesignName>학사관리디자인</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15 BYTE</dataTypeSize>
+<ownDataTypeParameters>15 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SALARY" id="C72C97A9-4199-719A-D1D2-20C24F14F3AA">
+<sourceConnName>%ED%95%99%EC%82%AC%EA%B4%80%EB%A6%AC</sourceConnName>
+<sourceObjSchema>PROFESSORS</sourceObjSchema>
+<sourceObjName>SALARY</sourceObjName>
+<createdBy>jay</createdBy>
+<createdTime>2024-04-19 02:21:36 UTC</createdTime>
+<ownerDesignName>학사관리디자인</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D6578D51-C569-354D-9A48-1F031A71405E" schemaObject="2106C361-B28D-B9A1-D520-BEBAA0454423" name="PROFESSORS_PK">
+<sourceConnName>%ED%95%99%EC%82%AC%EA%B4%80%EB%A6%AC</sourceConnName>
+<sourceObjSchema>HAKSA</sourceObjSchema>
+<sourceObjName>SYS_C007048</sourceObjName>
+<createdBy>jay</createdBy>
+<createdTime>2024-04-19 02:21:36 UTC</createdTime>
+<ownerDesignName>학사관리디자인</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3306680A-A9F4-B513-FB9D-F83D7A47669F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

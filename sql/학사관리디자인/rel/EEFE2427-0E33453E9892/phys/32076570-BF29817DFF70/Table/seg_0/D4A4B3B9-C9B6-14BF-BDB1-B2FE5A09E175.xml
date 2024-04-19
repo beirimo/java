@@ -1,0 +1,62 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="ENROLLMENTS" directorySegmentName="seg_0" id="D4A4B3B9-C9B6-14BF-BDB1-B2FE5A09E175">
+<createdBy>jay</createdBy>
+<createdTime>2024-04-19 02:21:36 UTC</createdTime>
+<ownerDesignName>학사관리디자인</ownerDesignName>
+<schemaObject>2106C361-B28D-B9A1-D520-BEBAA0454423</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>1A373168-BEFF-6717-5414-72682A69F159</segment>
+<tableSpace>D096B30A-21C3-1951-1AD5-6BC316217527</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="SCODE" id="23904823-AE73-72AC-89A7-941A28833282">
+<createdBy>jay</createdBy>
+<createdTime>2024-04-19 02:21:36 UTC</createdTime>
+<ownerDesignName>학사관리디자인</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="LCODE" id="38AD2334-8041-E0B4-3603-17CB9F60D80E">
+<createdBy>jay</createdBy>
+<createdTime>2024-04-19 02:21:36 UTC</createdTime>
+<ownerDesignName>학사관리디자인</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="EDATE" id="4582C46A-D8D2-5451-DCAC-7FC46BD572F4">
+<createdBy>jay</createdBy>
+<createdTime>2024-04-19 02:21:36 UTC</createdTime>
+<ownerDesignName>학사관리디자인</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="GRADE" id="99177E9C-1D55-591F-9043-36FC833797F4">
+<createdBy>jay</createdBy>
+<createdTime>2024-04-19 02:21:36 UTC</createdTime>
+<ownerDesignName>학사관리디자인</ownerDesignName>
+<defaultValue>0</defaultValue>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="SYS_C007060" id="C241F818-1526-190B-6ED9-F379C57483F0">
+<createdBy>jay</createdBy>
+<createdTime>2024-04-19 02:21:36 UTC</createdTime>
+<ownerDesignName>학사관리디자인</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="SYS_C007061" id="EE60ECEA-9076-E96A-D5F7-116146978B25">
+<createdBy>jay</createdBy>
+<createdTime>2024-04-19 02:21:36 UTC</createdTime>
+<ownerDesignName>학사관리디자인</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="ENROLLMENTS_PK" id="369FB0FE-35E1-05FF-43FD-71E4C0125C53">
+<createdBy>jay</createdBy>
+<createdTime>2024-04-19 02:21:36 UTC</createdTime>
+<ownerDesignName>학사관리디자인</ownerDesignName>
+<schemaObject>2106C361-B28D-B9A1-D520-BEBAA0454423</schemaObject>
+<segment>3BBC21B4-3528-9632-AFE4-900889F7BE70</segment>
+<tableSpace>D096B30A-21C3-1951-1AD5-6BC316217527</tableSpace>
+<indexSegment>3BBC21B4-3528-9632-AFE4-900889F7BE70</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev11g>

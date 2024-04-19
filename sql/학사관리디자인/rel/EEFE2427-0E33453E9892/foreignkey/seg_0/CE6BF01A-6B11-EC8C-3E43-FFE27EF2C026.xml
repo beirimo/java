@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="CE6BF01A-6B11-EC8C-3E43-FFE27EF2C026" containerWithKeyObject="3DC6446C-D3F2-AC08-888F-8AC89B9CEB7D" localFKIndex="E5B91C9E-4CEB-CC31-5753-3C225B63DEA3" name="SYS_C007056">
+<sourceConnName>%ED%95%99%EC%82%AC%EA%B4%80%EB%A6%AC</sourceConnName>
+<sourceObjSchema>HAKSA</sourceObjSchema>
+<sourceObjName>SYS_C007056</sourceObjName>
+<createdBy>jay</createdBy>
+<createdTime>2024-04-19 02:21:36 UTC</createdTime>
+<ownerDesignName>학사관리디자인</ownerDesignName>
+<referredTableLongName>HAKSA.PROFESSORS</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>5AFA20F5-37AD-778C-CF96-B79A44A1415B</referredTableID>
+<keyObject>D6578D51-C569-354D-9A48-1F031A71405E</keyObject>
+<referredKeyID>D6578D51-C569-354D-9A48-1F031A71405E</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>PCODE</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>
