@@ -1,7 +1,0 @@
-package pm;
-
-public class Sub01 {
-	public static void run() {
-		
-	}
-}

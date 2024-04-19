@@ -1,9 +1,0 @@
-package pm;
-
-public class Main {
-	public static void main(String[] args) {
-		Sub02.insert();
-		//Sub02.run();
-	}
-
-}
