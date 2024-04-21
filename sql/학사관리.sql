@@ -573,14 +573,125 @@ order by dept asc, birthday desc;
     
 */
 /*학생들의 학과, 학생이름, 지도교수이름을 검색하시오.*/
+
+select  s.dept , sname, pname    /* dept 는 겹치니까 s. 를 넣어서 조건만족 시켜주기?? from을 보니 알리아스를 써준 것을 활용하는거네 */
+from  professors p, students s 
+where advisor = pcode;
+
+
 /*강좌번호, 강좌명, 교수이름을 검색하시오.*/
+
+select lcode , lname, pname 
+from courses ,professors ;
+/* 위에서 이재광이 파일처리론으로 왜 나오는지 표를보고 이해가 가질 않음   */
+select lcode , lname, pname 
+from courses ,professors 
+where instructor = pcode;
+
+
 /*학번, 학생이름, 학생들이 수강신청 한 강좌번호, 수강신청일을 검색하시오*/
-/*학번, 학생들이 수강신청 한 강좌번호, 강좌명, 성적을 검색하시오.*/
+select s.scode, sname, lcode,edate
+from students s,enrollments e
+where e.scode= s.scode;
+/**/
+select s.scode, sname, lcode, edate 
+from students s, enrollments e 
+where s.scode=e.scode;
+
+/*(수정해야하나 92학번으로 해보자)92학번 학생들이 수강신청 한 강좌번호, 강좌명, 성적을 검색하시오.*/
+select lcode, lname, sgrade
+from enrollments e, students s, courses c
+where c.lcode = e.lcode, e.scode=s.scode='%92'???? 아 미치것네 되는게 없어;
+
 /*'이병렬'과 교수가 지도하는 학생들의 이름, 학년, 생년월일을 검색하시오*/
+select sname,year, birthday 
+from professors p, students s
+where s.dept='전산', s.advisor=p.pcode;
+
+select sname, year, birthday
+from students , professors
+where pcode = advisor   and pname='이병렬';
+
+select sname, year, birthday
+from students, professors
+where pcode=advisor and pname='이병렬';
+
+
 /*'98/03/03'에 수강신청 한 학생들의 학번, 학생이름, 강좌번호를 검색하시오.*/
+
+select s.scode , sname, lcode
+from courses , students s, enrollments e
+where s.scode = e.scode and edate = '98/03/03';
+
+select s.scode, sname, lcode 
+from students s, enrollments e 
+where s.scode = e.scode and edate ='98/03/03';
+
 /*'전산'과 교수들이 지도하는 학생들의 이름, 학년, 생년월일을 검색하시오.*/
+select sname, year, birthday
+from  professors p, students s
+where p.dept = '전산' and s.dept='전산' ; /*  아 맞긴 맞네 근데 두번씩 나와버렸네 이럴땐 어케해야하지 distinct 써도 되나?*/
+
+select sname, year, birthday 
+from students s, professors p 
+where pcode=advisor and p.dept='전산';  /* 아아 내 답안은  전산만 겹치고 이 답안은 pcode 까지 겹치는거네... 멍청아*/
+
 /*자료구조'를 강의하는 교수의 학과명, 교수 명을 검색하시오.*/
+
+select distinct dept, pname  /*편법 인줄 알았으나 역시 코딩과 다르게 답은 하나네*/
+from courses, professors
+where instructor = pcode;  
+where instructor = pcode;   /* 아 왜 두개씩나와..... 왜 그래요 왜 ... 나한테 왜그래*/
+
+select dept, pname 
+from professors, courses
+where instructor = pcode and lname='자료구조';
+
+select dept, pname 
+from professors, courses 
+where pcode=instructor and lname='자료구조';
+
 /*'파일처리론'을 수강신청 한 학생들의 학번, 수강신청일, 점수를 검색하시오.*/
+
+select scode, edate, grade
+from  enrollments e,courses c
+where  e.lcode = c.lcode and lname='파일처리론';
+where  instructor = advisor and lname='파일처리론';
+
+
+select scode, edate, grade 
+from courses c, enrollments e 
+where c.lcode=e.lcode and lname='파일처리론';
+
+
+
+/*'자료구조' 과목을 수강신청 한 학생들의 학과, 학생이름, 성적을 검색하시오.*/
+
+select  dept, sname, grade
+from enrollments, courses, students
+where  ;
+
+/*'전자'과 학생들의 학번, 학생이름, 수강신청 한 강좌번호, 강좌 명, 성적을 검색하시오.*/
+
+select s.scode, sname, c.lcode, lname , grade
+from students s , enrollments e, courses c
+where s.scode=e.scode and c.lcode= e.lcode  and  s.dept = '전자'; 
+
+where  s.dept = '전자';  /* 뭐야 왜 300명씩이나 나와 ㄴㅇ러ㅏㅣㄴ어라ㅣㄴ어라ㅣ넝*/
+
+select s.scode, sname, c.lcode, lname, grade 
+from students s, enrollments e, courses c 
+where s.scode=e.scode and c.lcode=e.lcode and dept='전자';
+
+
+
+/*'파일처리론'을 강의하는 교수의 이름, 이 교수가 지도하는 학생들의 학번, 학생명을 검색하시오.*/
+select p.pname, s.scode, s.sname, 
+from professors p, students s, courses c
+where
+
+
+
 /*'자료구조' 과목을 수강신청 한 학생들의 학과, 학생이름, 성적을 검색하시오.*/
 /*'전자'과 학생들의 학번, 학생이름, 수강신청 한 강좌번호, 강좌 명, 성적을 검색하시오.*/
 /*'파일처리론'을 강의하는 교수의 이름, 이 교수가 지도하는 학생들의 학번, 학생명을 검색하시오.*/
@@ -590,21 +701,215 @@ order by dept asc, birthday desc;
 
 
 /*3.데이터베이스 조회(3)*/
+;
 /*교수들의 총 급여액과 평균 급여액을 구하시오.*/
+
+select sum(salary),avg(salary) 
+from  professors;
+
+select sum(salary), avg(salary) from professors;
+
 /*전산과 교수들의 총 급여액과 평균 급여액을 구하시오.*/
+select sum(salary), avg(salary) 
+from professors
+where dept='전산';
+
+select sum(salary), avg(salary) from professors where dept='전산';
+
 /*수강신청 한 과목들 중에서 최고 점수와 최저 점수를 구하시오.*/
+select max(grade), min(grade) 
+from enrollments;
+
 /*전산과 학생들은 모두 몇 명인지 구하시오.*/
+
+select count(sname)
+from students
+where dept='전산';
+
+select count(scode) from students where dept='전산';
+
+
 /*수강신청 한 학생들은 모두 몇 명인지 구하시오.*/
+
+select count(distinct(scode))
+from enrollments;
+
+select count(distinct(scode)) from enrollments;
+
+
 /*각 학과별 학생들의 수를 구하시오.*/
+
+select dept ,count(scode)  
+from students 
+where dept='전산';
+
+select dept,count(*)
+from students
+where dept='전산';
+
+select dept , count(*)
+from students
+where dept='전산'
+group by  dept;
+
+select dept , count(*)
+from students
+group by  dept;
+
 /*교수들을 소속학과별, 직급별로 분류하여 각 직급별 평균 급여액수를 구하시오.*/
+select avg(salary), dept, title
+from professors
+group by dept, title;
+where 
+
+select dept, title, avg(salary) 
+from professors 
+group by dept, title;
+
 /*각 학생들에 대해 학번, 학생이름, 수강신청 과목들의 평균 점수를 구하시오.*/
+
+select avg(grade), s.scode, sname
+from enrollments e, students s
+group by students
+where s.scode = e.scode;
+
+select s.scode, sname, avg(grade) 
+from students s, enrollments e 
+where s.scode=e.scode 
+group by s.scode, sname;
+
+
 /*각 학생들에 대해 수강신청 과목들의 평균 점수를 구하시오.*/
-/*수강신청 한 과목들을 학생별로 그룹핑하여 평균 점수를 구한 다음, 학생번호, 평균 점수를 성적이 높은 순으로 정렬하여 출력하시오.*/
-/*수강신청 과목들의 평균 점수가 85점 이상인 학생들의 학생번호, 평균 점수를 구하시오.*/
+select avg(grade),scode
+from enrollments e, courses c
+group by  s.scode 
+where e.lcode = c.lcode;
+
+
+select table_name from user_tables;
+
+desc students;
+desc enrollments;
+
+select *
+from enrollments e, students s
+where 1=1
+and s.scode = e.scode
+group by s.scode
+;
+
+select scode, avg(grade) from enrollments group by scode; 
+
+/*  학생들중에 수강신청을 안한 학생  - 내가 생각한 문제 -> 출제자가 못푸는 요상한 문제 */
+select scode
+from students s, enrollments e
+where not in e.scode = s.scode;
+
+select scode
+from students , enrollments 
+group by sname
+where not in scode;
+
+
+
+/*수강신청 과목들의 grade를 보고 평균을 구하면 되지 굳이 course까진 볼 필요가 없네
+ 왜 자꾸 문제 풀 때는 풀리다가도 또  멀어지는 듯 하는건지 모르겠네
+ 답답하다 증말 잡힐 듯 말 듯*/
+ 
+
+/*수강신청 한 과목들을(enrollments)  학생별로 그룹핑하여( group by) 평균 점수를 구한 다음( select =avg(grade), 학생번호(소속=> enrollments), 평균 점수를 ///성적이 높은 순으로(desc) 정렬하여 출력하시오.
+                                  */
+select  avg(grade), scode
+from enrollments  
+group by scode
+where  e.scode = s.scode;
+
+select scode, avg(grade)
+from enrollments 
+group by scode 
+order by avg(grade) desc;
+
+
+/*수강신청 과목들의 평균 점수가 85점 이상인// 학생들의 학생번호, 평균 점수를 구하시오.*/
+
+select scode, avg(grade)
+from enrollments 
+group by scode
+where  avg(grade)>='85';
+
+
+select scode, avg(grade) 
+from enrollments 
+group by scode 
+having avg(grade) >= 85;
+
+/* 아 그렇구나  where을 썼으니까 그렇구나 group by 를 사용할 땐 무조건 having 을 써야 한댄다... 무조건인지는 모르것어...*/
+
 /*강좌별 평균점수가 80점 이상인 강좌들의 강좌번호와 평균점수를 출력하시오.*/
-/*학생수가 3명 이상인 학과 구한 다음, 학과명, 학생수를 출력하시오.*/
-/*수강신청 평균점수가 85점 이상인 학생들의 학생번호, 학생이름, 평균 점수를 평균점수가 높은 순으로 출력하시오.*/
-/*강좌별 평균점수가 80점 이상인 강좌들의 강좌번호, 강좌명, 평균점수를 평균점수가 높은 순으로 출력하시오.*/
+---
+select c.lcode,avg(e.grade)
+from courses c, enrollments e
+where c.lcode = e.lcode
+group by c.lcode
+having avg(e.grade) > 80
+;
+
+select * from courses;
+select * from enrollments;
+---
+select *0
+from courses s, enrollments e
+where e.lcode= c.lcode , avg(grade) >=80;
+group by lname
+
+
+/*수강신청 한 과목들을 학생별로 그룹핑하여 //평균 점수를 구한 다음,// 학생번호, 평균 점수를 성적이 높은 순으로 정렬하여 출력하시오.*/
+
+select  e.scode, avg(e.grade)
+from enrollments e
+group by e.scode 
+order by avg(e.grade) desc;
+
+select scode, avg(grade) 
+from enrollments 
+group by scode 
+order by avg(grade) desc;
+
+
+/*학생수가 3명 이상인  // 학과// 구한 다음, 학과명, 학생수를 출력하시오.*/
+select dept as 부서명, count(*) as 학생수
+from students s
+group by dept
+having count(*) > 3
+order  by 2 desc;
+
+
+
+/*수강신청 평균점수가 85점 이상인 // 학생들의 학생번호, 학생이름, 평균 점수를 평균점수가 높은 순으로 출력하시오.*/
+select s.scode, s.sname, avg(e.grade)
+from students s, enrollments e
+where s.scode = e.scode
+group by s.scode, s.sname
+having avg(e.grade) > 85;
+
+
+/*강좌별 평균점수가 80점 이상인// 강좌들의 강좌번호, 강좌명, 평균점수를 평균점수가 높은 순으로 출력하시오.*/
+
+select  avg(grade),c.lcode ,c.lname
+from enrollments e, courses c
+where e.lcode=c.lcode
+group by c.lcode, c.lname
+having avg(grade)>=80
+order by avg(grade)desc;
+
+
+
+select e.lcode, avg(e.grade), c.lname
+from enrollments e, courses c
+where e.lcode = c.lcode
+group by e.lcode, c.lname
+having avg(e.grade) >= 80
+order by 2 desc;
 
 
 /*4.데이터베이스 조회(4)*/
